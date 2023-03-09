@@ -56,34 +56,12 @@ export const BodyContent = styled.div``;
 export const PaginateContainer = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: red;
-
-  h2 {
-  }
-`;
-
-export const PaginateContent = styled.div`
-  width: 100%;
-
-  button {
-    background-color: transparent;
-    color: ${({ theme }) => theme.fontColorLight};
-    border-radius: 99999px;
-    padding: 8px;
-    border: none;
-  }
-
-  button:focus {
-    outline: thin dotted;
-    outline: 0px auto -webkit-focus-ring-color;
-    outline-offset: 0px;
-  }
+  align-items: center;
+  margin-top: 1rem;
 `;
 
 export const HistoryContainer = styled.main`
-  padding: 3.5rem 0;
+  padding: 1.5rem 0;
 
   display: flex;
   flex-direction: column;
@@ -96,7 +74,7 @@ export const HistoryContainer = styled.main`
 
 export const HistoryList = styled.div`
   overflow: auto;
-  margin-top: 2rem;
+  margin-top: 1rem;
   max-width: 900px;
 
   table {
@@ -131,37 +109,17 @@ export const HistoryList = styled.div`
       line-height: 1.6;
 
       &:first-child {
-        width: 50%;
+        /* width: 20%; */
         padding-left: 1.5rem;
       }
 
       &:last-child {
         padding-right: 1.5rem;
       }
+
+      img {
+        width: 30px;
+      }
     }
-  }
-`;
-
-const STATUS_COLORS = {
-  yellow: "yellow-500",
-  green: "green-500",
-  red: "red-500",
-} as const;
-
-interface StatusProps {
-  statusColor: keyof typeof STATUS_COLORS;
-}
-
-export const Status = styled.span<StatusProps>`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-
-  &::before {
-    content: "";
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 9999px;
-    background: green;
   }
 `;
