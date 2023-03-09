@@ -38,7 +38,7 @@ export function AnimeList() {
   const [totalItens, setTotalItens] = useState(0);
   const [offset, setOffset] = useState(0);
 
-  async function getData() {
+  async function loadAnimes() {
     try {
       const response = await api.get(
         `/anime?page[limit]=20&page[offset]=${offset}`
@@ -51,7 +51,7 @@ export function AnimeList() {
   }
 
   useEffect(() => {
-    getData();
+    loadAnimes();
   }, [offset]);
   return (
     <div>

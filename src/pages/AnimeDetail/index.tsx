@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
-import { BalanceCard } from "../../components/BalanceCard";
+import { BalanceCard } from "../../components/HomeCard";
 import { Header } from "../../components/Header";
 import { Sidebar } from "../../components/Sidebar";
 import { api } from "../../server/api";

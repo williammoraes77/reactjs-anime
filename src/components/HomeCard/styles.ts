@@ -30,4 +30,8 @@ export const BottomContent = styled.div`
   padding-top: 1rem;
 `;
 
-export const BottomLink = styled.p``;
+export const BottomLink = styled.p`
+  text-align: center;
+  color: ${({ theme }) => theme.fontColorLight};
+  font-size: 1.5rem;
+`;

@@ -1,9 +1,5 @@
-import {
-  ArrowCircleDown,
-  ArrowCircleUp,
-  CurrencyDollar,
-  ChartBar,
-} from "@phosphor-icons/react";
+import { ArrowCircleUp, ChartBar } from "@phosphor-icons/react";
+import { FC, SVGProps } from "react";
 
 import { priceFormatter } from "../../utils/formatter";
 import {
@@ -13,20 +9,26 @@ import {
   TopContent,
 } from "./styles";
 
-export function BalanceCard() {
+interface Props {
+  name: string;
+  amount: number;
+  // icon?: FC<SVGProps>;
+}
+
+export function HomeCard({ name, amount }: Props) {
   return (
     <BalanceContent>
       <TopContent>
         <ChartBar size={72} />
         <header>
           <span>Entradas</span>
-          <strong>{priceFormatter.format(10000)}</strong>
+          <strong>{amount}</strong>
         </header>
 
         <ArrowCircleUp size={32} color="#00b37e" />
       </TopContent>
       <BottomContent>
-        <BottomLink>Teste</BottomLink>
+        <BottomLink>{name}</BottomLink>
       </BottomContent>
     </BalanceContent>
   );
