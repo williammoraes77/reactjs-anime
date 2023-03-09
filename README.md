@@ -2,7 +2,7 @@
 
 ## Descrição do projeto
 
-## ReactJs
+## ReactJs Interview
 
 <br>
 
@@ -26,9 +26,10 @@ Foi desenvolvido um projeto web front-end consumindo uma API JSON da [Kitsu Api]
 ## Imagens
 
 <div align="center">
-  <img align="center" src="https://github.com/williammoraes77/react-interview/blob/master/public/img/print_01.png" alt="Imagem do projeto" height="150">
-  <img align="center" src="https://github.com/williammoraes77/react-interview/blob/master/public/img/print_02.png" alt="Imagem do projeto" height="150">
-  <img align="center" src="https://github.com/williammoraes77/react-interview/blob/master/public/img/print_03.png" alt="Imagem do projeto" height="150">
+
+  <img align="center" src="https://github.com/williammoraes77/react-interview/blob/main/public/img/print_01.png" alt="Imagem do projeto" height="150">
+  <img align="center" src="https://github.com/williammoraes77/react-interview/blob/main/public/img/print_02.png" alt="Imagem do projeto" height="150">
+  <img align="center" src="https://github.com/williammoraes77/react-interview/blob/main/public/img/print_03.png" alt="Imagem do projeto" height="150">
   <br>
   <br>
   
@@ -82,6 +83,6 @@ npm run dev
 
 ### Passo 4: copiar o endereço local conforme a imagem e abrir pelo navegador:
 
-  <img align="center" src="https://github.com/williammoraes77/react-interview/blob/master/public/img/print_04.png" alt="Imagem do projeto" height="200">
+  <img align="center" src="https://github.com/williammoraes77/react-interview/blob/main/public/img/print_04.png" alt="Imagem do projeto" height="200">
 
 Desenvolvido por William Moraes 🚀
