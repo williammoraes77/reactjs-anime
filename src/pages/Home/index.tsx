@@ -59,7 +59,7 @@ export function Home() {
               <HomeCard type="anime" name="Animes" amount={animesAmount} />
             </NavLink>
             <NavLink to="/mangas" title="Mangás">
-              <HomeCard type="manga" name="Mangas" amount={mangasAmount} />
+              <HomeCard type="manga" name="Mangás" amount={mangasAmount} />
             </NavLink>
           </BodyContent>
         </main>
