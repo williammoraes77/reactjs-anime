@@ -50,7 +50,6 @@ export function MangaDetail() {
     try {
       const response = await api.get(`/manga/${id}`);
 
-      console.log(response.data);
       setManga(response.data.data);
       setLoading(false);
     } catch (error) {

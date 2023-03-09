@@ -44,10 +44,11 @@ export function AnimeList() {
         `/anime?page[limit]=20&page[offset]=${offset}`
       );
 
-      console.log(response.data);
       setAnimes(response.data.data);
       setTotalItens(response.data.meta.count);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   useEffect(() => {

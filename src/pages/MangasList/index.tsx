@@ -45,7 +45,6 @@ export function MangasList() {
         `/manga?page[limit]=20&page[offset]=${offset}`
       );
 
-      console.log(response.data.data);
       setMangas(response.data.data);
       setTotalItens(response.data.meta.count);
     } catch (error) {}

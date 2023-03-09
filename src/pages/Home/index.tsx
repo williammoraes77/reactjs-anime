@@ -25,7 +25,6 @@ export function Home() {
     try {
       const response = await api.get("/anime");
 
-      console.log(response.data.meta.count);
       setAnimesAmount(response.data.meta.count);
     } catch (error) {}
   }
@@ -33,7 +32,6 @@ export function Home() {
     try {
       const response = await api.get("/manga");
 
-      console.log(response.data.meta.count);
       setMangasAmount(response.data.meta.count);
     } catch (error) {}
   }

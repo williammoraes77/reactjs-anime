@@ -49,8 +49,6 @@ export function AnimeDetail() {
   async function loadAnime(id: string) {
     try {
       const response = await api.get(`/anime/${id}`);
-
-      console.log(response.data);
       setAnime(response.data.data);
       setLoading(false);
     } catch (error) {
@@ -59,7 +57,6 @@ export function AnimeDetail() {
   }
 
   useEffect(() => {
-    console.log("aqiiijnkbjhbn");
     if (id) {
       loadAnime(id);
     }
