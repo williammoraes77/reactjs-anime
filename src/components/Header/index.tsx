@@ -13,16 +13,16 @@ export function Header() {
       <HeaderContent>
         <img src={logoImg} alt="" />
         <nav>
-          <a href="">
+          <a href="#">
             <MagnifyingGlass size={32} color={theme.fontColor} weight="fill" />
           </a>
-          <a href="">
+          <a href="#">
             <Users size={32} color={theme.fontColor} weight="fill" />
           </a>
-          <a href="">
+          <a href="#">
             <Bell size={32} color={theme.fontColor} weight="fill" />
           </a>
-          <a href="">
+          <a href="#">
             <UserImage />
           </a>
         </nav>

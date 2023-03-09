@@ -1,5 +1,11 @@
-import { ArrowCircleUp, ChartBar } from "@phosphor-icons/react";
+import {
+  ArrowCircleUp,
+  ChartBar,
+  MonitorPlay,
+  BookOpen,
+} from "@phosphor-icons/react";
 import { FC, SVGProps } from "react";
+import { useTheme } from "styled-components";
 
 import { priceFormatter } from "../../utils/formatter";
 import {
@@ -12,16 +18,22 @@ import {
 interface Props {
   name: string;
   amount: number;
-  // icon?: FC<SVGProps>;
+  type: "anime" | "manga";
 }
 
-export function HomeCard({ name, amount }: Props) {
+export function HomeCard({ name, amount, type }: Props) {
+  const theme = useTheme();
   return (
     <BalanceContent>
       <TopContent>
-        <ChartBar size={72} />
+        {type === "anime" ? (
+          <MonitorPlay size={72} color={theme.fontColor} weight="fill" />
+        ) : (
+          <BookOpen size={72} color={theme.fontColor} weight="fill" />
+        )}
+
         <header>
-          <span>Entradas</span>
+          <span>Total</span>
           <strong>{amount}</strong>
         </header>
 
