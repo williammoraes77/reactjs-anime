@@ -7,7 +7,6 @@ import {
 import { FC, SVGProps } from "react";
 import { useTheme } from "styled-components";
 
-import { priceFormatter } from "../../utils/formatter";
 import {
   BalanceContent,
   BottomContent,
