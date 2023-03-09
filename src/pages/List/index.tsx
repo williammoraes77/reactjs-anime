@@ -16,6 +16,8 @@ import {
   InfoResume,
   CreateButtom,
   BodyContent,
+  PaginateContainer,
+  PaginateContent,
   HistoryContainer,
   HistoryList,
 } from "./styles";
@@ -39,8 +41,7 @@ export function List() {
   const [itensPerPage, setItensPerPage] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
   const [paginateSequency, setPaginateSequency] = useState(1);
-
-  // console.log(contracts.length);
+  const [pageAccount, setPageAccount] = useState(1);
 
   const pages = Math.ceil(contracts.length / itensPerPage);
 
@@ -50,28 +51,25 @@ export function List() {
 
   const currentItens = contracts.slice(startIndex, endIndex);
 
-  const paginateAmount = offset / paginateSequency;
-
   async function getData() {
     try {
       const response = await api.get(`/contratos.json?offset=${offset}`);
 
-      // console.log(response.data._embedded.contratos);
-      console.log("offset:" + offset);
       setContracts(response.data._embedded.contratos);
     } catch (error) {}
   }
 
   function handleChangePage(e: number) {
     const numitens = (e + 1) * itensPerPage;
-    // console.log(e * itensPerPage);
-    // console.log(contracts.length);
-    console.log(e);
+
+    console.log(e + paginateSequency);
+    let pageTitle = e + paginateSequency;
+    setPageAccount(pageTitle);
     if (numitens === contracts.length) {
       console.log("Ultimo");
       let offSetoten = offset + 500;
       let addPaginateSequency = paginateSequency + 20;
-      // console.log(addPaginateSequency);
+
       setPaginateSequency(addPaginateSequency);
       setOffset(offSetoten);
     }
@@ -101,20 +99,23 @@ export function List() {
             </PageInfos>
           </PageTitleContainer>
           <BodyContent>
-            <div>
-              {Array.from(Array(pages), (item, index) => {
-                return (
-                  <button
-                    key={index}
-                    value={index}
-                    onClick={() => handleChangePage(Number(index))}
-                    // onClick={(e) => setCurrentPage(Number(e.target.value))}
-                  >
-                    {paginateSequency + index}
-                  </button>
-                );
-              })}
-            </div>
+            <PaginateContainer>
+              <PaginateContent>
+                {Array.from(Array(pages), (item, index) => {
+                  return (
+                    <button
+                      key={index}
+                      value={index}
+                      onClick={() => handleChangePage(Number(index))}
+                    >
+                      {paginateSequency + index}
+                    </button>
+                  );
+                })}
+              </PaginateContent>
+
+              <p>Pagina:{pageAccount}</p>
+            </PaginateContainer>
 
             <HistoryContainer>
               <HistoryList>

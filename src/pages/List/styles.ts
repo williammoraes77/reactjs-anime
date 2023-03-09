@@ -51,11 +51,36 @@ export const CreateButtom = styled.button`
   cursor: pointer;
 `;
 
-export const BodyContent = styled.div`
-  /* display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 2rem; */
+export const BodyContent = styled.div``;
+
+export const PaginateContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: red;
+
+  h2 {
+    color: green;
+  }
+`;
+
+export const PaginateContent = styled.div`
+  width: 100%;
+
+  button {
+    background-color: transparent;
+    color: ${({ theme }) => theme.fontColorLight};
+    border-radius: 99999px;
+    padding: 8px;
+    border: none;
+  }
+
+  button:focus {
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
+  }
 `;
 
 export const HistoryContainer = styled.main`
