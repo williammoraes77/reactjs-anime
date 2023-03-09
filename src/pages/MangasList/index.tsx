@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Sidebar } from "../../components/Sidebar";
-import { formatDistanceToNow } from "date-fns";
-import ptBR from "date-fns/locale/pt-BR";
 import { api } from "../../server/api";
 
 import {

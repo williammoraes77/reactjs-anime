@@ -5,14 +5,11 @@ import { Header } from "../../components/Header";
 import { Sidebar } from "../../components/Sidebar";
 
 import {
-  Container,
   Wrapper,
   PageTitleContainer,
   PageInfos,
-  InfoTop,
   InfoTitle,
   InfoResume,
-  CreateButtom,
   BodyContent,
 } from "./styles";
 import { api } from "../../server/api";
