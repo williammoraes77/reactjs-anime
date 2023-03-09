@@ -61,7 +61,6 @@ export const PaginateContainer = styled.div`
   background-color: red;
 
   h2 {
-    color: green;
   }
 `;
 
