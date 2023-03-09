@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { BalanceCard } from "../../components/BalanceCard";
 import { Header } from "../../components/Header";
 import { Sidebar } from "../../components/Sidebar";
@@ -23,15 +24,17 @@ export function Home() {
         <main>
           <PageTitleContainer>
             <PageInfos>
-              <InfoTop>Overview</InfoTop>
               <InfoTitle>Bom dia, William</InfoTitle>
-              <InfoResume>Resumo da pagina vai aqui!</InfoResume>
+              <InfoResume>Escolha o que deseja ver!</InfoResume>
             </PageInfos>
-            <CreateButtom type="button">Nova transacao</CreateButtom>
           </PageTitleContainer>
           <BodyContent>
-            <BalanceCard />
-            <BalanceCard />
+            <NavLink to="/animes" title="Animes">
+              <BalanceCard />
+            </NavLink>
+            <NavLink to="/mangas" title="Mangas">
+              <BalanceCard />
+            </NavLink>
           </BodyContent>
         </main>
       </Wrapper>

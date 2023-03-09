@@ -1,4 +1,5 @@
 import React from "react";
+import { dateFormatter } from "../../utils/formatter";
 import { UserImage } from "../UserImage";
 
 import {
@@ -16,7 +17,7 @@ export function UserCard() {
         <UserImage />
         <InfoContent>
           <NameText>William Moraes</NameText>
-          <Plantext>Planos: Premium</Plantext>
+          <Plantext>{dateFormatter.format(new Date())}</Plantext>
         </InfoContent>
       </CardContent>
     </CardContainer>

@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { BalanceCard } from "../../components/BalanceCard";
-import { Header } from "../../components/Header";
 import { Sidebar } from "../../components/Sidebar";
 import { formatDistanceToNow } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
@@ -17,11 +15,14 @@ import {
   HistoryList,
 } from "./styles";
 import { Pagination } from "../../components/Pagination";
-// import { Pagination } from "../../components/Pagination";
+import { NavLink } from "react-router-dom";
 
 interface Animes {
   id: number;
   type: string;
+  links: {
+    self: string;
+  };
   attributes: {
     canonicalTitle: string;
     averageRating: string;
@@ -32,7 +33,7 @@ interface Animes {
   };
 }
 
-export function List() {
+export function AnimeList() {
   const [animes, setAnimes] = useState<Animes[]>([]);
   const [totalItens, setTotalItens] = useState(0);
   const [offset, setOffset] = useState(0);
@@ -81,6 +82,7 @@ export function List() {
                       <th>Name</th>
                       <th>Nota</th>
                       <th>Class. Etária</th>
+                      <th>Detalhes</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -96,6 +98,11 @@ export function List() {
                           <td>{item.attributes.canonicalTitle}</td>
                           <td>{item.attributes.averageRating}</td>
                           <td>{item.attributes.ageRatingGuide}</td>
+                          <td>
+                            <NavLink to={`/anime/${item.id}`} title="Detail">
+                              <button>Detalhes</button>
+                            </NavLink>
+                          </td>
                         </tr>
                       );
                     })}

@@ -33,6 +33,6 @@ export const CardLinkOption = styled.div`
 `;
 
 export const OptionTitle = styled.p`
-  margin-left: 5px;
+  margin-left: 10px;
   color: ${({ theme }) => theme.fontColor};
 `;

@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Bell,
-  Users,
-  MagnifyingGlass,
-  House,
-  ChartBar,
-} from "@phosphor-icons/react";
+import { BookOpen, House, MonitorPlay } from "@phosphor-icons/react";
 import { UserCard } from "../UserCard";
 
 import {
@@ -34,10 +28,16 @@ export function Sidebar() {
             <OptionTitle>Home</OptionTitle>
           </CardLinkOption>
         </NavLink>
-        <NavLink to="/list" title="Listar">
+        <NavLink to="/animes" title="Listar">
           <CardLinkOption>
-            <ChartBar size={22} color={theme.fontColor} weight="fill" />
-            <OptionTitle>List</OptionTitle>
+            <MonitorPlay size={22} color={theme.fontColor} weight="fill" />
+            <OptionTitle>Animes</OptionTitle>
+          </CardLinkOption>
+        </NavLink>
+        <NavLink to="/mangas" title="Listar">
+          <CardLinkOption>
+            <BookOpen size={22} color={theme.fontColor} weight="fill" />
+            <OptionTitle>Mangás</OptionTitle>
           </CardLinkOption>
         </NavLink>
       </Options>

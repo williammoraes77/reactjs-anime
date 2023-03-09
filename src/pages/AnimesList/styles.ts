@@ -120,6 +120,11 @@ export const HistoryList = styled.div`
       img {
         width: 30px;
       }
+
+      button {
+        padding: 0.3rem;
+        border-radius: 8px;
+      }
     }
   }
 `;
