@@ -17,6 +17,7 @@ import {
   OptionTitle,
 } from "./styles";
 import { useTheme } from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export function Sidebar() {
   const theme = useTheme();
@@ -27,21 +28,18 @@ export function Sidebar() {
       </SideBarCardContent>
       <SidebarTitle>Geral</SidebarTitle>
       <Options>
-        <nav>
-          <a href="">
-            <CardLinkOption>
-              <House size={22} color={theme.fontColor} weight="fill" />
-              <OptionTitle>Home</OptionTitle>
-            </CardLinkOption>
-          </a>
-
-          <a href="">
-            <CardLinkOption>
-              <ChartBar size={22} color={theme.fontColor} weight="fill" />
-              <OptionTitle>List</OptionTitle>
-            </CardLinkOption>
-          </a>
-        </nav>
+        <NavLink to="/" title="Home">
+          <CardLinkOption>
+            <House size={22} color={theme.fontColor} weight="fill" />
+            <OptionTitle>Home</OptionTitle>
+          </CardLinkOption>
+        </NavLink>
+        <NavLink to="/list" title="Listar">
+          <CardLinkOption>
+            <ChartBar size={22} color={theme.fontColor} weight="fill" />
+            <OptionTitle>List</OptionTitle>
+          </CardLinkOption>
+        </NavLink>
       </Options>
     </SideBarContainer>
   );

@@ -17,7 +17,7 @@ export function BalanceCard() {
   return (
     <BalanceContent>
       <TopContent>
-        <ChartBar size={52} />
+        <ChartBar size={72} />
         <header>
           <span>Entradas</span>
           <strong>{priceFormatter.format(10000)}</strong>

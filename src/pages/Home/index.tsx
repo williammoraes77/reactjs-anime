@@ -18,7 +18,6 @@ import {
 export function Home() {
   return (
     <div>
-      <Header />
       <Wrapper>
         <Sidebar />
         <main>

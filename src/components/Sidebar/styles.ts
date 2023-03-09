@@ -17,11 +17,7 @@ export const SidebarTitle = styled.h3`
   color: ${({ theme }) => theme.fontColor};
 `;
 
-export const Options = styled.div`
-  a {
-    text-decoration: none;
-  }
-`;
+export const Options = styled.div``;
 
 export const CardLinkOption = styled.div`
   display: flex;
@@ -29,7 +25,11 @@ export const CardLinkOption = styled.div`
   align-items: center;
   padding: 0.5rem 1rem;
   margin-bottom: 0.3rem;
-  /* background-color: pink; */
+  border-radius: 8px;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.fontColorDark};
+  }
 `;
 
 export const OptionTitle = styled.p`
