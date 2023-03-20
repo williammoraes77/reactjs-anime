@@ -8,7 +8,7 @@
 
 </h1>
 
-<p>Esse projeto foi desenvolvido com a finalidade de teste em um processo seletivo.</p>
+<p>Esse projeto foi desenvolvido com a finalidade de colocar em prática o desenvolvimento com ReactJS.</p>
 
 ## Funcionalidades
 
@@ -27,9 +27,9 @@ Foi desenvolvido um projeto web front-end consumindo uma API JSON da [Kitsu Api]
 
 <div align="center">
 
-  <img align="center" src="https://github.com/williammoraes77/react-interview/blob/main/public/img/print_01.png" alt="Imagem do projeto" height="150">
-  <img align="center" src="https://github.com/williammoraes77/react-interview/blob/main/public/img/print_02.png" alt="Imagem do projeto" height="150">
-  <img align="center" src="https://github.com/williammoraes77/react-interview/blob/main/public/img/print_03.png" alt="Imagem do projeto" height="150">
+  <img align="center" src="https://github.com/williammoraes77/reactjs-anime/blob/main/public/img/print_01.png" alt="Imagem do projeto" height="150">
+  <img align="center" src="https://github.com/williammoraes77/reactjs-anime/blob/main/public/img/print_02.png" alt="Imagem do projeto" height="150">
+  <img align="center" src="https://github.com/williammoraes77/reactjs-anime/blob/main/public/img/print_03.png" alt="Imagem do projeto" height="150">
   <br>
   <br>
   
@@ -62,7 +62,7 @@ https://nodejs.org/en/download/
 ### Passo 1: Faça o clone ou download do projeto:
 
 ```sh
-git clone https://github.com/williammoraes77/react-interview.git
+git clone https://github.com/williammoraes77/reactjs-anime.git
 ```
 
 ### Passo 2: Através do terminal acesse a pasta raiz do projeto e faça o download das dependências:
@@ -83,6 +83,6 @@ npm run dev
 
 ### Passo 4: copiar o endereço local conforme a imagem e abrir pelo navegador:
 
-  <img align="center" src="https://github.com/williammoraes77/react-interview/blob/main/public/img/print_04.png" alt="Imagem do projeto" height="200">
+  <img align="center" src="https://github.com/williammoraes77/reactjs-anime/blob/main/public/img/print_04.png" alt="Imagem do projeto" height="200">
 
 Desenvolvido por William Moraes 🚀
